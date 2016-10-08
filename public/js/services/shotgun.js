@@ -3,7 +3,9 @@ angular.module('MyApp')
     return {
       getLeaderboard: function() {
         // return $http.get('/');
-         return [{"id":"david","name":"david","score":30,"photo":"https://avatars.githubusercontent.com/magicknot"}];
+         return [{"id":"david","name":"david","score":30,"photo":"https://avatars.githubusercontent.com/magicknot"},
+       {"id":"diutsu","name":"Gonçalo","score":13,"photo":"https://avatars.githubusercontent.com/diutsu"},
+     {"id":"lasering","name":"Simao","score":2,"photo":"https://avatars.githubusercontent.com/lasering"}];
       },
       getCars: function() {
       //  return $http.get('/cars');
