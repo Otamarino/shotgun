@@ -46,6 +46,9 @@ angular.module('MyApp')
           "car":{"owner":"simao"}
         }
       },
+      getUser: function(name) {
+        //return $http.get('/user/'+name);
+      },
 
 
       getDisputeReasons: function() {
@@ -63,14 +66,14 @@ angular.module('MyApp')
       getDispute:function(disputeId){
         //return $http.get('/dispute/'+disputeId);
           return {"id": disputeId,
-          "reason":"dasassaddasasd",
-          "user":{"name":"goncalo","photo":"https://avatars.githubusercontent.com/diutsu"},
-          "choice":"spock",
-          "shotgun":{
-            "user":{"name":"david","photo":"https://avatars.githubusercontent.com/magicknot"},
-            "car":{"owner":"simao"},
-            "choice":"rock"
-          }
+            "reason":"dasassaddasasd",
+            "user": {"name":"goncalo","photo":"https://avatars.githubusercontent.com/diutsu"},
+            "choice":"spock",
+            "shotgun":{
+              "user":{"name":"david","photo":"https://avatars.githubusercontent.com/magicknot"},
+              "car":{"owner":"simao"},
+              "choice":"rock"
+            }
         }
       },
       gameDispute:function(disputeId, data){

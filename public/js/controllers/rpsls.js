@@ -1,9 +1,6 @@
 angular.module('MyApp')
   .controller('RPSLSCtrl', function(ShotgunService, $location, $routeParams, $scope) {
-    ShotgunService.getDispute($routeParams.disputeId)
-    .then(function(data){
-      $scope.dispute= data;
-       if(data.choice && data.shotgun.choice){
+  $scope.dispute=   ShotgunService.getDispute($routeParams.disputeId)
               $scope.tie=()=>{
                 var qwe =$scope.dispute.choice;
                 var asd = $scope.dispute.shotgun.choice;
@@ -48,9 +45,7 @@ angular.module('MyApp')
               if(!qwe.localeCompare("spock") && !asd.localeCompare("rock"))return"vaporizes"
               if(!qwe.localeCompare("rock") && !asd.localeCompare("scissors"))return"crushes"
               else return "is"
-          }
         }
-    });
 
     $scope.choices = [
         {"name":"rock"},
