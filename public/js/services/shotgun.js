@@ -10,7 +10,7 @@ angular.module('MyApp')
       return [
         {"id":"csimao","owner":"simao","plate":"22-AA-12","model":"mercedes class E","free":true,"disputed":false,
           "photo":"https://avatars.githubusercontent.com/lasering"},
-        {"id":"cdavid","owner":"david","plate":"22-BB-12","model":"cup do Aco","free":false,"disputed":false,
+        {"id":"cdavid","owner":"david","plate":"22-BB-12","model":"saxo cup do Aco","free":false,"disputed":false,
           "photo":"https://avatars.githubusercontent.com/magicknot"},
         {"id":"cdts","owner":"goncalo","plate":"LF-RF","model":"Left and Right feet","free":false,"disputed":true,
           "photo":"https://avatars.githubusercontent.com/diutsu"},
