@@ -14,17 +14,17 @@
   </div>
   <div class="row">
     <div class="col-sm-6">
-      <p ng-if="wonDispute()" class="choice">{{dispute.choice}} <strong>{{ verb() }}</strong> {{dispute.shotgun.choice}}</p>
-      <p ng-if="!wonDispute()" class="choice">{{dispute.shotgun.choice}} <strong>{{ verb() }}</strong> {{dispute.choice}}</p>
+      <p ng-if="wonDispute" class="choice">{{dispute.choice}} <strong>{{ verb}}</strong> {{dispute.shotgun.choice}}</p>
+      <p ng-if="!wonDispute " class="choice">{{dispute.shotgun.choice}} <strong>{{ verb }}</strong> {{dispute.choice}}</p>
     </div>
   </div>
-  <div ng-show="wonDispute()" class="blue-bar">
+  <div ng-show="wonDispute" class="blue-bar">
     <p >You win!</p>
   </div>
-  <div ng-show="!wonDispute()&&!tie()" class="red-bar">
+  <div ng-show="!wonDispute&&!tie" class="red-bar">
     <p>You lost!</p>
   </div>
-  <div ng-show="tie()" class="red-bar">
+  <div ng-show="tie" class="red-bar">
     <p>Tie!</p>
   </div>
   <div class="unshot" ng-hide="true">Unshot this car</div>

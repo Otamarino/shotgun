@@ -1,12 +1,13 @@
 angular.module('MyApp')
   .controller('RPSLSCtrl', function(ShotgunService, $location, $routeParams, $scope) {
   $scope.dispute=   ShotgunService.getDispute($routeParams.disputeId)
-              $scope.tie=()=>{
+
+              computeTie=()=>{
                 var qwe =$scope.dispute.choice;
                 var asd = $scope.dispute.shotgun.choice;
                 return qwe.localeCompare(asd)==0
               }
-              $scope.wonDispute=()=>{
+              computeWon=()=>{
                 var qwe = $scope.dispute.choice;
                 var asd = $scope.dispute.shotgun.choice;
                 console.log(asd)
@@ -24,28 +25,43 @@ angular.module('MyApp')
               }
 
 
-          $scope.verb =()=>{
+          computeVerb =()=>{
               var qwe;
               var asd;
-              if(wonDispute()){
+              if($scope.wonDispute){
                 qwe=$scope.dispute.choice;
                 asd=$scope.dispute.shotgun.choice;
               } else {
                 asd=$scope.dispute.choice;
                  qwe=$scope.dispute.shotgun.choice;
               }
-              if(!qwe.localeCompare("scissors") && !asd.localeCompare("paper"))return"cuts"
-              if(!qwe.localeCompare("paper") && !asd.localeCompare("rock"))return"covers"
-              if(!qwe.localeCompare("rock") && !asd.localeCompare("lizard"))return"crushes"
-              if(!qwe.localeCompare("lizard") && !asd.localeCompare("spock"))return"poisons"
-              if(!qwe.localeCompare("spock") && !asd.localeCompare("scissors"))return"smashes"
-              if(!qwe.localeCompare("scissors") && !asd.localeCompare("lizard"))return"decapitates"
-              if(!qwe.localeCompare("lizard") && !asd.localeCompare("paper"))return"eats"
-              if(!qwe.localeCompare("paper") && !asd.localeCompare("spock"))return"disproves"
-              if(!qwe.localeCompare("spock") && !asd.localeCompare("rock"))return"vaporizes"
-              if(!qwe.localeCompare("rock") && !asd.localeCompare("scissors"))return"crushes"
+              if(!qwe.localeCompare("scissors") && !asd.localeCompare("paper"))
+              return"cuts"
+              if(!qwe.localeCompare("paper") && !asd.localeCompare("rock"))
+              return"covers"
+              if(!qwe.localeCompare("rock") && !asd.localeCompare("lizard"))
+              return"crushes"
+              if(!qwe.localeCompare("lizard") && !asd.localeCompare("spock"))
+              return"poisons"
+              if(!qwe.localeCompare("spock") && !asd.localeCompare("scissors"))
+              return"smashes"
+              if(!qwe.localeCompare("scissors") && !asd.localeCompare("lizard"))
+              return"decapitates"
+              if(!qwe.localeCompare("lizard") && !asd.localeCompare("paper"))
+              return"eats"
+              if(!qwe.localeCompare("paper") && !asd.localeCompare("spock"))
+              return"disproves"
+              if(!qwe.localeCompare("spock") && !asd.localeCompare("rock"))
+              return"vaporizes"
+              if(!qwe.localeCompare("rock") && !asd.localeCompare("scissors"))
+              return"crushes"
               else return "is"
         }
+
+        $scope.wonDispute = computeWon();
+
+        $scope.tie = computeTie();
+        $scope.verb=computeVerb();
 
     $scope.choices = [
         {"name":"rock"},
