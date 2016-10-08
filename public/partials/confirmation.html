@@ -1,7 +1,9 @@
 <div class="container pane center-pane blue-pane">
-  <div class="user-logo">
-    <img class="profile" ng-src="{{shotgun.user.photo}}">
-    <span class="profile-corner fa fa-crosshairs fa-5x"></span>
+  <div class="user-logo row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <img class="profile" ng-src="{{shotgun.user.photo}}">
+      <span class="profile-corner fa fa-crosshairs fa-5x"></span>
+    </div>
   </div>
   <div ng-if="shotgun" class="shotgun-text">
     <p>You have</br><strong>Shotgunned</strong><br/>{{shotgun.car.owner}}'s car</p>
@@ -9,8 +11,6 @@
   <div ng-show="shotgun.time" class="blue-bar">
     <p>{{shotgun.time}}</p>
   </div>
-  <div class="unshot" ng-hide="true">Unshot this car</div>
-
 </div>
 <div class="footer">
   <div class="center-button"><a ng-href="/"><img src="images/home@2x.png"/></a></div>
