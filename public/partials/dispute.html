@@ -1,17 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid pane blue-pane">
   <div class="header">
-    <p class="header-title">{{header.title}}</p>
+    <h1 class="header-title">Shotgun dispute</h1>
   </div>
   <div class="content">
     <div class="row">
       <div class="col-sm-12">
-        {{shotgun.user.name}} has shotgunned {{shogun.car.owner.name}}'s car
+        <p>{{shotgun.user.name}} has shotgunned {{shotgun.car.owner}}'s car</p>
+        <p>Dispute with:</p>
       </div>
       <div class="col-sm-12">
         <ol>
-          <div ng-repeat="reason in reasons" class="row reason">
+          <div ng-repeat="reason in reasons" class="row entry">
             <div class="col-sm-12">
-              <li>{{$index + 1}} {{reason}}</li>
+              <a ng-click="dispute(reason.id)"><li>{{reason.msg}}</li></a>
             </div>
           </div>
         </ol>
@@ -19,6 +20,10 @@
     </div>
   </div>
   <div class="footer">
-    <div class="center-text"><a>Cancel</a></div>
+    <div class="center-button"><a ng-href="/"><span class="fa fa-home fa-5x"></span></a></div>
+    <div class="footer-inner">
+      <!-- <div class="left-button"><a ng-href="/home"><span class="fa fa-home"></span></div>
+      <div class="right-button"><a ng-href="/profile/{{user.id}}"><span class="fa fa-user"></span></div> -->
+    </div>
   </div>
 </div>

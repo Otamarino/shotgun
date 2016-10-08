@@ -1,13 +1,21 @@
-<div class="container">
+<div class="container pane center-pane blue-pane">
   <div class="user-logo">
-    <img ng-src="{{shogun.user.photo}}">
-    <img src="/imgs/icons/shotgun">
+    <img class="profile" ng-src="{{shotgun.user.photo}}">
+    <span class="profile-corner fa fa-crosshairs fa-5x"></span>
   </div>
-  <div class="shotgun-text">
-    <p>You have</br><strong>Shotgunned</strong><br/>this car</p>
+  <div ng-if="shotgun" class="shotgun-text">
+    <p>You have</br><strong>Shotgunned</strong><br/>{{shotgun.car.owner}}'s car</p>
   </div>
-  <div class="blue-bar">
-    {{shotgun.time}}
+  <div ng-show="shotgun.time" class="blue-bar">
+    <p>{{shotgun.time}}</p>
   </div>
   <div class="unshot" ng-hide="true">Unshot this car</div>
+
+</div>
+<div class="footer">
+  <div class="center-button"><a ng-href="/"><span class="fa fa-home fa-5x"></span></a></div>
+  <div class="footer-inner">
+    <!-- <div class="left-button"><a ng-href="/home"><span class="fa fa-home"></span></div>
+    <div class="right-button"><a ng-href="/profile/{{user.id}}"><span class="fa fa-user"></span></div> -->
+  </div>
 </div>

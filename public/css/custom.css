@@ -1,0 +1,125 @@
+.entry {
+  border-top:1px solid #666;
+  border-bottom:1px solid #666;
+  padding: 10px;
+  margin-top:-1px;
+}
+.profile {
+  max-width: 80%;
+  max-height:200px;
+  border-radius: 50%;
+  border: 3px solid #aaa;
+ }
+.profile-corner {
+  vertical-align: bottom;
+  position: relative;
+  left:-40px;
+}
+.action-icon {
+  text-align: right;
+}
+.action-icon a {
+  color: #0aa8d8;
+}
+.action-icon .disputed {
+  color: #d8480a;
+}
+.pane {
+  height:100%;
+  width: 100%;
+  position: absolute;
+}
+
+.center-pane {
+  text-align: center;
+  vertical-align: center;
+  padding: 0;
+}
+
+.blue-pane {
+  background-color: #0d1c4f;
+  color: #ddd;
+
+}
+.white-pane {
+  background-color: #e8e8e8;
+  color: #333;
+}
+.footer {
+  position: fixed;
+  left:0px;
+  bottom:0px;
+  height:100px;
+  width:100%;
+  padding-top: 10px;
+  z-index: 19;
+}
+.footer-inner {
+  position: fixed;
+  bottom:0px;
+  height:50px;
+  width:100%;
+  padding: 0;
+  background:#090733;
+  z-index: 20;
+}
+
+.center-button {
+  text-align: center;
+  z-index: 21;
+  position: relative;
+}
+
+.center-button span {
+  line-height: 80px;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: #090733;
+  border: 10px solid #090733;
+}
+.header-title {
+  text-align: center;
+}
+
+
+.left-button {
+  float:left;
+  padding:10px 20px 10px 20px;
+}
+
+.right-button {
+  float:right;
+  padding:10px 20px 10px 20px;
+}
+
+.blue-bar {
+  background-color: #0aa8d8;
+  width: 100%;
+  font-size: 2em;
+  vertical-align: middle;
+  padding:25px;
+}
+
+.red-bar {
+  background-color: red;
+  width: 100%;
+  font-size: 2em;
+  vertical-align: middle;
+  padding:25px;
+}
+
+
+.green-bar {
+  background-color: green;
+  width: 100%;
+  font-size: 2em;
+  vertical-align: middle;
+  padding:25px;
+}
+.shotgun-text{
+  padding: 50px;
+  font-size: 3em;
+
+}

@@ -1,25 +1,34 @@
-<div class="container-fluid">
+<div class="container-fluid pane blue-pane">
   <div class="header">
-    <p class="header-title">{{header.title}}</p>
+    <h1 class="header-title">Shotgun dispute</h1>
   </div>
-  <div class="content">
+  <div class="content" ng-click="update()"  >
     <div class="row">
       <div class="col-sm-12">
         You have choosen:
       </div>
+      {{dispute}}
       <div class="col-sm-12">
-        <ul>
-          <div class="col-sm-12">
-            <li><span class="icon icon-{{choice}}"></li>
-          </div>
-        </ul>
+        <div class="col-sm-12 text-center">
+          <p>
+          <span class="fa-stack fa-2x" ng-click="update()">
+            <i class=" fa fa-hand-{{dispute.choice}}-o fa-stack-1x"></i>
+            <i class="fa fa-circle-thin fa-stack-2x"></i></span>{{choice.name}}
+          </span>
+        </p>
+
+        </div>
       </div>
       <div class="col-sm-12">
-        Waiting for {{shotgun.user.name}}
+        Waiting for {{dispute.shotgun.user.name}}
       </div>
     </div>
   </div>
   <div class="footer">
-    <div class="center-text"><a>Cancel</a></div>
+    <div class="center-button"><a ng-href="/"><span class="fa fa-home fa-5x"></span></a></div>
+    <div class="footer-inner">
+      <!-- <div class="left-button"><a ng-href="/home"><span class="fa fa-home"></span></div>
+      <div class="right-button"><a ng-href="/profile/{{user.id}}"><span class="fa fa-user"></span></div> -->
+    </div>
   </div>
 </div>

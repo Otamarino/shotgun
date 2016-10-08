@@ -1,6 +1,4 @@
 angular.module('MyApp')
-  .controller('LeaderboardCtrl', function($scope) {
-    $scope.leaderboards = function() {
-      //http get
-    };
+  .controller('LeaderboardCtrl', function(ShotgunService, $scope) {
+    $scope.leaderboard = ShotgunService.getLeaderboard();
   });

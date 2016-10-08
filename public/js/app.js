@@ -7,9 +7,13 @@ angular.module('MyApp', ['ngRoute', 'satellizer'])
         templateUrl: 'partials/home.html',
         controller: 'LeaderboardCtrl',
       })
+      .when('/profile/:userId', {
+        templateUrl: 'partials/user.html',
+        controller: 'UserCtrl',
+      })
       .when('/shotgun', {
         templateUrl: 'partials/cars.html',
-        controller: 'ShotgunCtrl'
+        controller: 'CarsCtrl'
       })
       .when('/shotgun/:shogunId', {
         templateUrl: 'partials/confirmation.html',
@@ -19,15 +23,15 @@ angular.module('MyApp', ['ngRoute', 'satellizer'])
         templateUrl: 'partials/dispute.html',
         controller: 'DisputeCtrl',
       })
-      .when('/dispute/:shogunId/challenge', {
+      .when('/dispute/:disputeId/challenge', {
         templateUrl: 'partials/dispute-challenge.html',
         controller: 'RPSLSCtrl',
       })
-      .when('/game/:disputeId', {
+      .when('/dispute/:disputeId/confirmation', {
         templateUrl: 'partials/dispute-confirmation.html',
         controller: 'RPSLSCtrl',
       })
-      .when('/game/:disputeId/result', {
+      .when('/dispute/:disputeId/result', {
         templateUrl: 'partials/dispute-win.html',
         controller: 'RPSLSCtrl',
       })

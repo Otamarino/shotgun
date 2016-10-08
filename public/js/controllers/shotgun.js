@@ -1,6 +1,7 @@
 angular.module('MyApp')
-  .controller('ShotgunCtrl', function($scope) {
-    $scope.leaderboards = function() {
-      //http get
-    };
+  .controller('ShotgunCtrl', function(ShotgunService, $routeParams, $scope) {
+
+    var carId = $routeParams.carId
+
+    $scope.shotgun = ShotgunService.shotgun(carId)
   });

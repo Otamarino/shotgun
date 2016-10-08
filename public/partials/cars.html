@@ -1,27 +1,35 @@
-<div class="container-fluid">
+<div class="container pane blue-pane">
   <div class="header">
-    <p class="header-title">{{header.title}}</p>
+    <h1 class="header-title">{{header}}</h1>
   </div>
-  <div class="content">
+  <div class="content ">
     <div class="row">
-      <div class="col-sm-12">
-        <div ng-repeat="car in cars" class="row">
-          <div class="col-sm-12">
-            <img class="car-photo" src="{{car.photo}}"/>
-            <div class="car-status">
+      <div class="col-xs-12">
+        <div ng-repeat="car in cars" class="row entry">
+          <div class="col-xs-2">
+            <img class="profile" src="{{car.photo}}"/>
+          </div>
+            <div class="col-xs-8 car-status">
               <p class="car-name">
-                {{car.name}}</p>
-                <p class="car-model">
-                  {{car.mode}}</p>
-            <div  ng-show="car.free && !car.disputed"><a ng-click="shotgun(car)"><span class="icon icon-shotgun"></span></a></div>
-            <div  ng-show="!car.free && !car.disputed"><a ng-href="dispute(car)"><span class="icon icon-dispute "></span></a>/div>
-            <div  ng-hide="car.disputed"><span class="icon icon-disputed"></span></div>
+                {{car.owner}}</p>
+              <small class="car-model">
+                  {{car.model}}</small>
+            </div>
+            <div class="col-xs-2 action-icon">
+              <div  ng-show="free(car)"><a ng-href="/shotgun/{{car.id}}"><span class="fa fa-crosshairs fa-2x"></span></a></div>
+              <div  ng-show="dispute(car)"><a ng-href="/dispute/{{car.id}}"><span class="fa fa-hand-rock-o fa-2x"></span></a></div>
+              <div  ng-show="disputing(car)"><span class="disputed fa fa-hand-rock-o fa-2x"></span></div>
+          </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="footer">
-    <div class="center-button"><a ng-href="/home" ><img src"img/icons/back.png"></a></div>
+    <div class="center-button"><a ng-href="/"><span class="fa fa-home fa-5x"></span></a></div>
+    <div class="footer-inner">
+      <!-- <div class="left-button"><a ng-href="/home"><span class="fa fa-home"></span></div>
+      <div class="right-button"><a ng-href="/profile/{{user.id}}"><span class="fa fa-user"></span></div> -->
+    </div>
   </div>
-</div>
