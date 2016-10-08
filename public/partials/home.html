@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="header">
+    <p class="header-title">{{header.title}}</p>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="col-sm-12">
+        <div ng-repeat="leader in leaderboard" class="row">
+          <div class="col-sm-12">
+            <a ng-href="/user/profille/{{leader}}">
+              <p class="leader-position">{{$index+1}}</p>
+              <img class="leader-photo" src="{{leader.photo}}"/>
+              <p class="leader-name">{{leader.name}}</p>
+              <p class="leader-score">{{leader.score}}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="left-button"><a ng-href="/home"><img src="img/icons/home.png"></a></div>
+    <div class="center-button"><a ng-href="/shotgun"><img src"img/icons/shotgun.png"></a></div>
+    <div class="right-button"><a ng-href="/profile"><img src="img/icons/profile.png"></a></div>
+  </div>
+</div>

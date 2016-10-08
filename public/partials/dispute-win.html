@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 user-logo">
+      <img class="profile" ng-src="{{dispute.winner.photo}}">
+      <img class="center overlap" ng-src="/img/icons/{{dispute.winner.choice}}.png">
+    </div>
+    <div class="col-sm-6 user-logo">
+      <img class="profile" ng-src="{{dispute.loser.photo}}">
+      <img class="center overlap" ng-src="/img/icons/{{dispute.loser.choice}}.png">
+      <p class="choice">{{dispute.loser.choice}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <p class="choice">{{dispute.winner.choice}}<strong>{{choiceEffect()}}</strong>{{dispute.loser.choice}}</p>
+    </div>
+  </div>
+  <div ng-show="wonDispute()" class="blue-bar">
+    <p >You win!</p>
+  </div>
+  <div ng-show="!wonDispute()" class="red-bar">
+    <p>You lost!</p>
+  </div>
+  <div class="unshot" ng-hide="true">Unshot this car</div>
+</div>

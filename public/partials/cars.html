@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="header">
+    <p class="header-title">{{header.title}}</p>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="col-sm-12">
+        <div ng-repeat="car in cars" class="row">
+          <div class="col-sm-12">
+            <img class="car-photo" src="{{car.photo}}"/>
+            <div class="car-status">
+              <p class="car-name">
+                {{car.name}}</p>
+                <p class="car-model">
+                  {{car.mode}}</p>
+            <div  ng-show="car.free && !car.disputed"><a ng-click="shotgun(car)"><span class="icon icon-shotgun"></span></a></div>
+            <div  ng-show="!car.free && !car.disputed"><a ng-href="dispute(car)"><span class="icon icon-dispute "></span></a>/div>
+            <div  ng-hide="car.disputed"><span class="icon icon-disputed"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="center-button"><a ng-href="/home" ><img src"img/icons/back.png"></a></div>
+  </div>
+</div>

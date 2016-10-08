@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="header">
+    <p class="header-title">{{header.title}}</p>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="col-sm-12">
+        {{shotgun.user.name}} {{dispute.reason}}
+      </div>
+      <div class="col-sm-12">
+        <ul>
+          <div ng-repeat="choice in choices" class="row">
+            <div class="col-sm-12">
+              <li><span class="icon icon-{{choice}}"></li>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="center-text"><a>Cancel</a></div>
+  </div>
+</div>

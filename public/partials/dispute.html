@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="header">
+    <p class="header-title">{{header.title}}</p>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="col-sm-12">
+        {{shotgun.user.name}} has shotgunned {{shogun.car.owner.name}}'s car
+      </div>
+      <div class="col-sm-12">
+        <ol>
+          <div ng-repeat="reason in reasons" class="row reason">
+            <div class="col-sm-12">
+              <li>{{$index + 1}} {{reason}}</li>
+            </div>
+          </div>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="center-text"><a>Cancel</a></div>
+  </div>
+</div>
