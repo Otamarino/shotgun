@@ -9,23 +9,11 @@ angular.module('MyApp')
       //  return $http.get('/cars');
       return [
         {"id":"csimao","owner":"simao","plate":"22-AA-12","model":"mercedes class E","free":true,"disputed":false,
-      "photo":"https://avatars.githubusercontent.com/lasering"},
+          "photo":"https://avatars.githubusercontent.com/lasering"},
         {"id":"cdavid","owner":"david","plate":"22-BB-12","model":"cup do Aco","free":false,"disputed":false,
-      "photo":"https://avatars.githubusercontent.com/magicknot"},
+          "photo":"https://avatars.githubusercontent.com/magicknot"},
         {"id":"cdts","owner":"goncalo","plate":"LF-RF","model":"Left and Right feet","free":false,"disputed":true,
-        "photo":"https://avatars.githubusercontent.com/diutsu"},
-        {"id":"asdas","owner":"qwe","plate":"22-AA-12","model":"mercedes class E","free":true,"disputed":false,
-      "photo":"https://avatars.githubusercontent.com/lasering"},
-        {"id":"qeqw","owner":"qwe","plate":"22-BB-12","model":"cup do Aco","free":false,"disputed":false,
-      "photo":"https://avatars.githubusercontent.com/magicknot"},
-      {"id":"1231","owner":"goncalo","plate":"LF-RF","model":"Left and Right feet","free":false,"disputed":true,
-      "photo":"https://avatars.githubusercontent.com/diutsu"},
-      {"id":"tret","owner":"qwe","plate":"22-AA-12","model":"mercedes class E","free":true,"disputed":false,
-      "photo":"https://avatars.githubusercontent.com/lasering"},
-        {"id":"htth","owner":"qwe","plate":"22-BB-12","model":"cup do Aco","free":false,"disputed":false,
-      "photo":"https://avatars.githubusercontent.com/magicknot"},
-        {"id":"qwe","owner":"qweq","plate":"LF-RF","model":"Left and Right feet","free":false,"disputed":true,
-        "photo":"https://avatars.githubusercontent.com/diutsu"}
+          "photo":"https://avatars.githubusercontent.com/diutsu"},
     ]
 
       },
@@ -53,11 +41,11 @@ angular.module('MyApp')
 
       getDisputeReasons: function() {
         //return $http.get('/reasons');
-        return [{"id":"1","msg":"das"},
-        {"id":"2","msg":"asd"},
-        {"id":"3","msg":"dqas"},
-        {"id":"4","msg":"qwe"},
-        {"id":"5","msg":"gdf"}]
+        return [{"id":"1","msg":"Didn't say 'Shotgun!'"},
+        {"id":"2","msg":"Wasn't outside"},
+        {"id":"3","msg":"Re-entred the building"},
+        {"id":"4","msg":"Didn't had line-of-side"},
+        {"id":"5","msg":"No seatback"}]
       },
       dispute:function(){
         //return $http.post('/dispute', data);
@@ -66,7 +54,7 @@ angular.module('MyApp')
       getDispute:function(disputeId){
         //return $http.get('/dispute/'+disputeId);
           return {"id": disputeId,
-            "reason":"dasassaddasasd",
+            "reason":"Wasn't outside",
             "user": {"name":"goncalo","photo":"https://avatars.githubusercontent.com/diutsu"},
             "choice":"spock",
             "shotgun":{
